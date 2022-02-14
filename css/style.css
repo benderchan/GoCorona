@@ -652,6 +652,12 @@ body {
 .experts__block-text {
   max-width: 25rem;
 }
+@media (max-width: 767.98px) {
+  .experts__block-text {
+    text-align: center;
+    max-width: 100%;
+  }
+}
 
 .experts__video {
   padding-bottom: 30%;
@@ -678,7 +684,6 @@ body {
 }
 @media (max-width: 767.98px) {
   .experts__content {
-    padding: 0;
     margin-bottom: 1.875rem;
   }
 }
@@ -794,8 +799,8 @@ body {
   border-radius: 8px;
 }
 .cards-healthcare__card:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -807,11 +812,26 @@ body {
   }
 }
 
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .healthcare__cards__decor {
   z-index: -1;
   position: absolute;
   background: #ec5863;
   border-radius: 30px;
+  -webkit-animation: rotate 10s infinite linear;
+          animation: rotate 10s infinite linear;
 }
 
 .healthcare__cards__decor1 {
@@ -875,9 +895,11 @@ body {
 
 .google-img {
   margin: 0 28px;
+  cursor: pointer;
 }
 
 .apple-img {
+  cursor: pointer;
   margin: 0 28px;
 }
 
