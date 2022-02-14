@@ -793,6 +793,14 @@ body {
           box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
   border-radius: 8px;
 }
+.cards-healthcare__card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
 @media (max-width: 991.98px) {
   .cards-healthcare__card {
     margin: 15px;
@@ -875,4 +883,10 @@ body {
 
 .fixed-position {
   position: fixed;
+}
+
+.block-txt {
+  opacity: 0;
+  -webkit-transition: opacity 1.2s ease;
+  transition: opacity 1.2s ease;
 }
